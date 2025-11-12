@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Login</title>
+    <title>Register</title>
 </head>
 <body>
-    <form action="{{route('user.login')}}" method="POST">
+    <form action="{{route('user.register')}}" method="POST">
         @csrf
         <input type="text" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
+        <input type="password" name="confirm_password" placeholder="Confirm password">
+        <button type="submit">Register</button>
     </form>
 </body>
 </html>
