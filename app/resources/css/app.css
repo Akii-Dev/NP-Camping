@@ -9,3 +9,20 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+.huisregelBG {
+    border-color: #4BA0AF;
+}
+
+.huisregelBG2 {
+    border-color: #C1633F;
+}
+
+.normTekst {
+    font-family: 'Open Sans';
+}
+
+.kopje {
+    font-family: 'Roboto';
+}
