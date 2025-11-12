@@ -14,4 +14,12 @@ class Booking extends Model
     {
         return $this->belongsTo(Customer::class);
     }
+
+    protected $fillable = [
+        'customer_id',
+        'number_of_people',
+        'accommodation',
+        'has_dog',
+        'extra_tents',
+    ];
 }

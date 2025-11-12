@@ -19,4 +19,20 @@ class Customer extends Model
     {
         return $this->hasMany(Booking::class);
     }
+
+    // fillable fields
+    protected $fillable = [
+        'user_id',
+        'title',
+        'initials',
+        'intersertion',
+        'surname',
+        'street',
+        'house_number',
+        'house_number_addition',
+        'postal_code',
+        'city',
+        'country',
+        'phone_number',
+    ];
 }
