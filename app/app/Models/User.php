@@ -45,4 +45,15 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // connect user to admin and customer
+    public function admin()
+    {
+        return $this->hasOne(Admin::class);
+    }
+
+    public function customer()
+    {
+        return $this->hasOne(Customer::class);
+    }
 }
