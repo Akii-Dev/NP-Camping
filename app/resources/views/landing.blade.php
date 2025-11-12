@@ -33,31 +33,31 @@
         </div>
         <section class="flex flex-row my-8 text-center">
             <div class="w-64 cyan1 rounded shadow-xl p-2 bg-zinc-100 mx-2">
-                <img class="rounded-lg" src="./img/card1.png" alt="" />
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card1.png') }}" alt="" />
                 <div class="p-3">
                     <h3 class="mb-2 text-xl font-bold tracking-tight">Rust en ruimte</h3>
-                    <p class="mb-3">Met natuurgebieden in de omgeving zal u hier van absolute rust genieten</p>
+                    <p class="mb-3">Geniet van de frisse Groninger lucht en de prachtige natuur</p>
                 </div>
             </div>
             <div class="w-64 cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
-                <img class="rounded-lg" src="./img/card2.avif" alt="" />
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card2.avif') }}" alt="" />
                 <div class="p-3">
                     <h3 class="mb-2 text-xl font-bold tracking-tight">Gezellige sfeer</h3>
-                    <p class="mb-3">Bij de camping is er genoeg ruimte om met elkaar bezig te gaan</p>
+                    <p class="mb-3">Ontmoet andere kampeerders en ervaar de gastvrijheid van Groningen</p>
                 </div>
             </div>
             <div class="w-64 cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
-                <img class="rounded-lg" src="./img/card3.avif" alt="" />
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card3.avif') }}" alt="" />
                 <div class="p-3">
                     <h3 class="mb-2 text-xl font-bold tracking-tight">Persoonlijke aandacht</h3>
-                    <p class="mb-3">Er is altijd een medewerker beschikbaar om u te helpen</p>
+                    <p class="mb-3">Ons team staat klaar om u te helpen met al uw vragen</p>
                 </div>
             </div>
             <div class="w-64 cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
-                <img class="rounded-lg" src="./img/card4.jpg" alt="" />
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card4.jpg') }}" alt="" />
                 <div class="p-3">
                     <h3 class="mb-2 text-xl font-bold tracking-tight">Unieke locatie</h3>
-                    <p class="mb-3">Ontdek de prachtige wandelroutes de dorpjes in de buurt</p>
+                    <p class="mb-3">Ontdek de schoonheid van Noord-Nederland</p>
                 </div>
             </div>
         </section>
