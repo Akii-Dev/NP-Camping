@@ -4,7 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('landing');
+    return view('index');
 });
 
 Route::get('/login', [UserController::class, 'showLoginForm'])->name('user.showLoginForm');
