@@ -14,5 +14,21 @@
         <input type="password" name="password" placeholder="Password">
         <button type="submit">Login</button>
     </form>
+    <a href="{{route('user.register')}}">Nog geen account?</a>
+    
+    {{-- this is for errors which are not input validation errors --}}
+                @if (session('error'))
+                    <div class="bg-red-500">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                {{-- input validation errors --}}
+                @if ($errors->any())
+                    <div>
+                        @foreach ($errors->all() as $error)
+                            <p class="bg-red-500">{{ $error }}</p>
+                        @endforeach
+                    </div>
+                @endif
 </body>
 </html>
