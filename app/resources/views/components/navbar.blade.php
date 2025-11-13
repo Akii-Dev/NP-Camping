@@ -19,6 +19,7 @@
         <hr class="w-[80%] my-8 bg-gray-400 border-1">
         <a href="#" class="my-6 underline decoration-black yellow1text">Booken</a>
         <a href="#" class="my-6 underline decoration-black yellow1text">Account</a>
-        <a href="#" class="my-6 underline decoration-black yellow1text">Huisregels</a>
+        {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller--}}
+        <a href="./rules" class="my-6 underline decoration-black yellow1text">Huisregels</a> 
     </div>
 </nav>

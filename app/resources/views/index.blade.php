@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>Home | NP-Camping</title>
 </head>
-<body>
-    <nav class="bg-gray-600 ">
 
-    </nav>
-    <header>
-    </header>
-    <div class="flex flex-col items-center">
-        <img src="{{ Vite::asset('resources/imgs/logo.png') }}" class="w-64 h-64">
-        <div class="flex justify-center">
-            <h1 class="text-5xl font-bold mb-10 kopje">Huis Regels</h1>
+<body class="bg-neutral-300 relative text-lg">
+    <x-navbar></x-navbar>
+    <div style="background-image: url('{{ Vite::asset('resources/img/camperimg.jpg') }}')"
+        class="relative h-[90vh] bg-black overflow-hidden bg-cover bg-bottom flex justify-center">
+        <div
+            class="mx-4 mt-[55vh] h-[28vh] w-1/4 flex flex-col items-center backdrop-blur-sm text-center py-4 px-16 rounded text-white">
+            <h3 class="font-bold text-2xl mb-4 underline decoration-white yellow1textNonLink">NP Camping</h3>
+            <p>Welkom bij dé camping voor stilte en rust, het perfecte uitje op het platteland!</p>
         </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG">
-            <h1 class="text-4xl font-bold kopje">Stilte</h1>
-            <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">Na 23:00 tot 07:00 geen lawaai want andere gasten liggen nog te slapen dus houd uw geluids niveau laag.</h4>
-            </div>
-        </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG2">
-            <h1 class="text-4xl font-bold kopje">Vuurput</h1>
-            <h4 class="text-2xl">U mag alleen de vuurputten gebruiken in overleg met medewerkers</h4>
-        </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG">
-            <h1 class="text-4xl font-bold kopje">Zwembad</h1>
-            <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">1.Het Zwembad is open van 10:00 tot 17:00</h4>
-                <h4 class="text-2xl">2.Niet rennen rond het zwembad</h4>
-                <h4 class="text-2xl">3.alleen zwemmen wanneer de badmeester aan</h4>
-            </div>
-        </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG2">
-            <h1 class="text-4xl font-bold kopje">Huisdieren</h1>
-            <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">1.Zorg dat je uw Huisdieren aan de riem houd</h4>
-                <h4 class="text-2xl">2.Laat uw hond niet op het kampeerterrein uit</h4>
-            </div>
-        </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG">
-            <h1 class="text-4xl font-bold kopje">Bezoekers</h1>
-            <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">1.Bezoekers mogen langs komen van 07:00 tot 23:00</h4>
-                <h4 class="text-2xl">2.Als bezoekers willen overnachten dan moeten ze 20 euro per nacht betalen</h4>
-            </div>
-        </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG2">
-            <h1 class="text-4xl font-bold kopje">Auto's</h1>
-            <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">1.Je kunt je auto op het parkeer terein plaatsen of in uw tent vak</h4>
-                <h4 class="text-2xl">2.Als bezoekers willen overnachten dan moeten ze 20 euro per nacht betalen</h4>
-            </div>
+        <div
+            class="mx-4 mt-[65vh] h-[18vh] w-1/4 flex flex-col items-center justify-center backdrop-blur-sm text-center py-2 px-16 rounded text-white">
+            <h3 class="font-bold text-2xl mb-4">Book nu een plaats!</h3>
+            <a href="#"><button class="w-24 h-12 orange1 rounded">Booken</button></a>
         </div>
     </div>
-    <footer>
-
-    </footer>
+    <main class="flex flex-col items-center justfiy-center bg-neutral-200 px-44">
+        <hr class="w-[80%] my-8 border-1">
+        <div
+            class="h-48 w-3/5 cyan1 bg-zinc-100 rounded py-4 px-8 mb-16 flex flex-col justfiy-center items-center text-center">
+            <h2 class="text-2xl font-semibold">titel hier</h2>
+            <p>heel veel tekst heel veel tekst heel veel tekst heel veel tekst heel veel tekst heel veel tekst heel veel
+                tekst heel veel tekst heel veel tekst heel veel tekst heel veel tekst heel veel tekst</p>
+        </div>
+        <section class="flex flex-row my-8 text-center">
+            <div class="w-64 cyan1 rounded shadow-xl p-2 bg-zinc-100 mx-2">
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card1.png') }}" alt="" />
+                <div class="p-3">
+                    <h3 class="mb-2 text-xl font-bold tracking-tight">Rust en ruimte</h3>
+                    <p class="mb-3">Geniet van de frisse Groninger lucht en de prachtige natuur</p>
+                </div>
+            </div>
+            <div class="w-64 cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card2.avif') }}" alt="" />
+                <div class="p-3">
+                    <h3 class="mb-2 text-xl font-bold tracking-tight">Gezellige sfeer</h3>
+                    <p class="mb-3">Ontmoet andere kampeerders en ervaar de gastvrijheid van Groningen</p>
+                </div>
+            </div>
+            <div class="w-64 cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card3.avif') }}" alt="" />
+                <div class="p-3">
+                    <h3 class="mb-2 text-xl font-bold tracking-tight">Persoonlijke aandacht</h3>
+                    <p class="mb-3">Ons team staat klaar om u te helpen met al uw vragen</p>
+                </div>
+            </div>
+            <div class="w-64 cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
+                <img class="rounded-lg" src="{{ Vite::asset('resources/img/card4.jpg') }}" alt="" />
+                <div class="p-3">
+                    <h3 class="mb-2 text-xl font-bold tracking-tight">Unieke locatie</h3>
+                    <p class="mb-3">Ontdek de schoonheid van Noord-Nederland</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <x-footer></x-footer>
 </body>
+
 </html>

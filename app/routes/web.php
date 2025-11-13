@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/rules', function () {
+    return view('rules');
+});
+
 Route::get('/login', [UserController::class, 'showLoginForm'])->name('user.showLoginForm');
 Route::get('/register', [UserController::class, 'showRegisterForm'])->name('user.showRegisterForm');
 
