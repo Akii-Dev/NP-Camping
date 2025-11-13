@@ -19,3 +19,22 @@ window.addEventListener('scroll', () => {
         navContent.classList.add('pointer-events-none');
     }
 });
+
+const burgerBtn = document.getElementById('burgerBtn');
+const sideNav = document.getElementById('sideNav');
+
+burgerBtn.addEventListener('click', () => {
+    sideNav.classList.toggle('-translate-x-full');
+});
+
+const overlay = document.getElementById('overlay');
+
+burgerBtn.addEventListener('click', () => {
+    sideNav.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+});
+
+overlay.addEventListener('click', () => {
+    sideNav.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+});
