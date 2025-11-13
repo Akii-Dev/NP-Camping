@@ -7,9 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <nav class="bg-gray-600 ">
-
-    </nav>
+    <x-navbar></x-navbar>
     <header>
     </header>
     <div class="flex flex-col items-center">
@@ -25,7 +23,9 @@
         </div>
         <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG2">
             <h1 class="text-4xl font-bold kopje">Vuurput</h1>
-            <h4 class="text-2xl">U mag alleen de vuurputten gebruiken in overleg met medewerkers</h4>
+            <div class="flex flex-col text-left w-full px-6">
+                <h4 class="text-2xl">U mag alleen de vuurputten gebruiken in overleg met medewerkers</h4>
+            </div>
         </div>
         <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG">
             <h1 class="text-4xl font-bold kopje">Zwembad</h1>
@@ -49,7 +49,7 @@
                 <h4 class="text-2xl">2.Als bezoekers willen overnachten dan moeten ze 20 euro per nacht betalen</h4>
             </div>
         </div>
-        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl huisregelBG2">
+        <div class="flex flex-col items-center mt-6 border-t-4 border-b-4 border-indigo-500 w-2xl rounded-xl mb-10 huisregelBG2">
             <h1 class="text-4xl font-bold kopje">Auto's</h1>
             <div class="flex flex-col text-left w-full px-6">
                 <h4 class="text-2xl">1.Je kunt je auto op het parkeer terein plaatsen of in uw tent vak</h4>
@@ -57,8 +57,6 @@
             </div>
         </div>
     </div>
-    <footer>
-
-    </footer>
+    <x-footer></x-footer>
 </body>
 </html>
