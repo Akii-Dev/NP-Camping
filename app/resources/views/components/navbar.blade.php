@@ -9,7 +9,7 @@
 </button>
 
 <nav id="sideNav"
-    class="z-10 left-0 h-screen w-12 fixed bg-zinc-300/30 text-center duration-500 py-2 text-2xl font-bold">
+    class="z-10 left-0 min-h-screen w-12 fixed bg-zinc-300/30 text-center duration-500 py-2 text-2xl font-bold">
     <div id="navContent"
         class="relative flex flex-col items-center transition-all duration-400 ease-in-out opacity-0 pointer-events-none">
         <a href="#">
