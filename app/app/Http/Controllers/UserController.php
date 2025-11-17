@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -27,7 +28,9 @@ class UserController extends Controller
         }
 
 
-        $_SESSION['user'] = $user; // useful for knowing the name and role
+        // $_SESSION['user'] = $user; // useful for knowing the name and role
+        session(['user' => $user]); // laravel session way
+
 
 
         if ($user->role === 'admin') {
@@ -53,11 +56,25 @@ class UserController extends Controller
         $user = User::factory()->create([
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
+            'role' => 'customer', // set role to customer by default
+        ]);
+
+        // create customer profile for new user
+        Customer::create([
+            'user_id' => $user->id,
         ]);
 
         // keep user logged in after registration
-        $_SESSION['user'] = $user;
+        // $_SESSION['user'] = $user; // standard php session way
+        session(['user' => $user]); // proper laravel session way
 
-        return redirect()->route('dashboard');
+        return view('index');
+    }
+
+    public function logout()
+    {
+        session()->flush(); // clear all session data.
+
+        return view('index');
     }
 }
