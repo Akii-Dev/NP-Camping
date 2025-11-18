@@ -11,7 +11,11 @@ class CustomerController extends Controller
 
     public function show(Request $request, $id)
     {
-        $customer = Customer::find($id);
+        $user = User::find($id);
+        if (!$user) {
+            return redirect('/')->with('error', 'Gebruiker niet gevonden');
+        }
+        $customer = $user->customer;
         return view('customer.show', compact('customer'));
     }
     // resource methods would go here. we'll work with edit user account. showing the view page and logic
@@ -26,12 +30,20 @@ class CustomerController extends Controller
             return redirect('/login')->with('error', 'Je kunt alleen je eigen profiel bewerken');
         }
 
-        $customer = Customer::find($id);
+        // $customer = Customer::find($id);
+        $user = User::find($id);
 
-        var_dump(session('user.id'));
-        var_dump(session('user.email'));
-        var_dump($customer->user_id);
-        var_dump($customer->user->email); // this works because of the relationship defined in the Customer model
-        return view('customers.edit', compact('customer')); // compact is the same as ['customer' => $customer]
+        $customer = $user->customer;
+
+        // var_dump(session('user.id'));
+        // var_dump(session('user.email'));
+        // var_dump($customer->user_id);
+        // var_dump($customer->user->email); // this works because of the relationship defined in the Customer model
+        return view('customer.edit', compact('customer')); // compact is the same as ['customer' => $customer]
+    }
+
+    public function update(Request $request, $id)
+    {
+        echo "update";
     }
 }
