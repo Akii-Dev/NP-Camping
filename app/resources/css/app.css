@@ -10,28 +10,20 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-.yellow1 {
-    background-color: #deb841;
-}
-
-.yellow1text {
-    color: #deb841;
-}
-
-.yellow1text:hover {
-    color: #ad8f35;
-}
-
-.yellow1textNonLink {
-    color: #deb841;
-}
-
 .orange1 {
     background-color: #cf5c36;
 }
 
+.orange1textNoLink {
+    color: #cf5c36;
+}
+
 .orange1text {
     color: #cf5c36;
+}
+
+.orange1text:hover {
+    color: #b14825;
 }
 
 .cyan1 {
