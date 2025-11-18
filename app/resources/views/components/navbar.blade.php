@@ -1,10 +1,8 @@
 <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-[5] md:hidden"></div>
 
-<button id="burgerBtn"
-    class="fixed top-4 left-4 z-20 p-2 bg-zinc-800 text-white rounded-md focus:outline-none md:hidden">
+<button id="burgerBtn" class="fixed top-4 left-4 z-20 p-2 bg-zinc-800 text-white rounded-md focus:outline-none md:hidden">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
 </button>
 
@@ -18,8 +16,20 @@
 
         <hr class="w-[80%] my-8 bg-gray-400 border-1">
         <a href="#" class="my-6 underline decoration-black yellow1text">Booken</a>
-        <a href="{{route('user.login')}}" class="my-6 underline decoration-black yellow1text">Account</a>
-        {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller--}}
-        <a href="./rules" class="my-6 underline decoration-black yellow1text">Huisregels</a> 
+
+        {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller --}}
+        <a href="./rules" class="my-6 underline decoration-black yellow1text">Huisregels</a>
+        {{--  --}}
+
+        <a href="{{ route('user.login') }}" class="my-6 underline decoration-black yellow1text">Login</a>
+
+        @auth
+        <a href="{{ route('customer.show', session('user.id')) }}" class="my-6 underline decoration-black yellow1text">Account</a>
+
+            <form method="POST" action="{{ route('user.logout') }}">
+                @csrf
+                <button type="submit" class="my-6 underline decoration-black yellow1text">Logout</button>
+            </form>
+        @endauth
     </div>
 </nav>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -30,7 +31,7 @@ class UserController extends Controller
 
         // $_SESSION['user'] = $user; // useful for knowing the name and role
         session(['user' => $user]); // laravel session way
-
+        Auth::login($user); // authenticate user so we can use @auth
 
 
         if ($user->role === 'admin') {
@@ -68,6 +69,10 @@ class UserController extends Controller
         // $_SESSION['user'] = $user; // standard php session way
         session(['user' => $user]); // proper laravel session way
 
+        // authenticate user so we can use @auth
+        Auth::login($user);
+        
+
         return view('index');
     }
 
@@ -75,6 +80,7 @@ class UserController extends Controller
     {
         session()->flush(); // clear all session data.
 
+        Auth::logout(); 
         return view('index');
     }
 }
