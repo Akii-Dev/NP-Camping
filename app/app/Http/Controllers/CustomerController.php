@@ -44,6 +44,27 @@ class CustomerController extends Controller
 
     public function update(Request $request, $id)
     {
-        echo "update";
+        $validated = $request->validate([
+            'title' => 'nullable|string|max:10',
+            'initials' => 'required|string|max:10',
+            'intersertion' => 'nullable|string|max:50',
+            'surname' => 'required|string|max:100',
+            'street' => 'nullable|string|max:100',
+            'house_number' => 'required|numeric|max:9999', // max 10 would mean number 11 can't be used.
+            'house_number_addition' => 'nullable|string|max:10',
+            'postal_code' => 'required|string|max:20',
+            'city' => 'required|string|max:100',
+            'country' => 'required|string|max:100',
+            'phone_number' => 'required|string|max:20',
+        ]);
+
+        $user = User::find($id);
+        $customer = $user->customer;
+
+        // return $customer;
+        $customer->update($validated); // assigns all validated input into customer
+                return redirect()->route('customer.show', $user->id)->with('success', 'Profiel succesvol bijgewerkt'); // use this instead of return route
+
+
     }
 }
