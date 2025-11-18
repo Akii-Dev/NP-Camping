@@ -18,7 +18,7 @@
         </div>
     </div>
     </header>
-    <div class="max-w-2xl flex flex-col items-center mx-auto mb-12 -mt-50 z-20 gradient-bg-rules rounded-4xl border-t-8">
+    <div class="max-w-2xl flex flex-col items-center mx-auto mb-12 -mt-70 z-20 gradient-bg-rules rounded-4xl border-t-8">
         {{-- <img src="{{ Vite::asset('resources/imgs/logo.png') }}" class="w-64"> --}}
         <div>
             <h1 class="text-5xl font-bold mb-10 kopje border-4 p-4 rounded-4xl mt-10">Huisregels</h1>
