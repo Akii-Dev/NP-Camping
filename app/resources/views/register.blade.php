@@ -17,7 +17,7 @@
 
                 {{-- Login panel --}}
                 <div class="flex flex-col p-10 lg:p-16 justify-center rounded-l-2xl bg-gray-500/95 shadow-xl/30 ">
-                    <h2 class="text-cyan-500 text-4xl font-bold mb-10 lg:mb-16">Inloggen</h2>
+                    <h2 class="text-cyan-500 text-4xl font-bold mb-10 lg:mb-16">Registreren</h2>
 
                     <form class="flex flex-col w-full max-wxs lg:w-80" action="{{route('user.register')}}" method="POST">
                         @csrf
@@ -30,7 +30,7 @@
                         <label class="mt-3 font-bold">Herhaal wachtwoord</label>
                         <input class="bg-white mb-6 rounded-2xl p-2 shadow-xl/30" type="password" name="confirm_password" placeholder="Herhaal wachtwoord">
 
-                        <button class="bg-white mt-8 rounded-2xl p-2 w-full shadow-xl/30 text-xl font-bold text-cyan-500" type="submit">Login</button>
+                        <button class="bg-white mt-8 rounded-2xl p-2 w-full shadow-xl/30 text-xl font-bold text-cyan-500" type="submit">Registreer</button>
                     </form>
                 </div>
             </div>

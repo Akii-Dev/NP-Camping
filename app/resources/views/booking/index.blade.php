@@ -15,7 +15,7 @@
             <div class="bg-yellow-500 w-32">
             @elseif ($spot->booked == 0)
                 <div class="bg-green-500 w-28"> {{-- Different width to show difference --}}
-                    <button onclick="selectSpot({{ $spot->id }})">Click me</button>
+                    <button onclick="selectSpot({{ $spot->id }})">Boek</button>
         @endif
 
         <h2>Spot {{ $spot->id }}</h2>

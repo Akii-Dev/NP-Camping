@@ -63,10 +63,10 @@
                             <p>Maak je verblijf compleet en voeg extra's toe aan je boeking.</p>
                         </div>
                     </div>
-                    <a class="bg-amber-300 text-xl font-bold rounded-2xl p-3 w-full max-w-xs text-center lg:px-20 lg:w-auto shadow-xl/30" href="{{route('user.register')}}">Registeer</a>
+                    <a class="bg-amber-300 text-xl font-bold rounded-2xl p-3 w-full max-w-xs text-center lg:px-20 lg:w-auto shadow-xl/30" href="{{route('user.register')}}">Registreer</a>
                 </div>
-                <a class="bg-amber-300 text-xl font-bold rounded-2xl p-2 px-20 shadow-xl/30"
-                    href="{{ route('user.register') }}">Registeer</a>
+                {{-- <a class="bg-amber-300 text-xl font-bold rounded-2xl p-2 px-20 shadow-xl/30"
+                    href="{{ route('user.register') }}">Registeer</a> --}}
             </div>
         </div>
     </div>
