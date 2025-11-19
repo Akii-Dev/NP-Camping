@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Login</title>
 </head>
+
 <body class="bg-blue-300">
     <x-navbar></x-navbar>
     <div style="background-image: url('{{ Vite::asset('resources/imgs/BosLogin.jpg') }}')"
@@ -63,9 +65,13 @@
                     </div>
                     <a class="bg-amber-300 text-xl font-bold rounded-2xl p-3 w-full max-w-xs text-center lg:px-20 lg:w-auto shadow-xl/30" href="{{route('user.register')}}">Registeer</a>
                 </div>
+                <a class="bg-amber-300 text-xl font-bold rounded-2xl p-2 px-20 shadow-xl/30"
+                    href="{{ route('user.register') }}">Registeer</a>
             </div>
+        </div>
     </div>
-    <footer class="text-white bg-zinc-900 h-auto w-auto px-2 lg:px-40 py-2 grid grid-row-3 lg:grid-cols-3 lg:h-36 lg:divide-x-1 divide-solid divide-white">
+    <footer
+        class="text-white bg-zinc-900 h-auto w-auto px-2 lg:px-40 py-2 grid grid-row-3 lg:grid-cols-3 lg:h-36 lg:divide-x-1 divide-solid divide-white">
         <div class="px-2 text-sm row-span-1 lg:row-span-0 border-b-2 lg:border-b-0">
             <h3 class="font-semibold text-lg">Contact</h3>
             <p>Email: info@npcamping.nl</p>
@@ -99,4 +105,5 @@
         </div>
     @endif
 </body>
+
 </html>

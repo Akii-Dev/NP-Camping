@@ -17,6 +17,19 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        $newAdmins = 2;
+        $newCustomers = 5;
+
+        User::factory($newAdmins)->hasAdmin()->create([
+            'role' => 'admin',
+        ]);
+
+        User::factory($newCustomers)->hasCustomer()->create([
+            'role' => 'customer',
+        ]);
+
+        
+
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
