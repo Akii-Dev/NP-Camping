@@ -17,12 +17,10 @@
 
         {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller --}}
         <a href="./rules" class="my-6 underline decoration-black yellow1text">Huisregels</a>
-        {{--  --}}
-
         <a href="{{ route('user.login') }}" class="my-6 underline decoration-black yellow1text">Login</a>
-
         @auth
-        <a href="{{ route('customer.show', session('user.id')) }}" class="my-6 underline decoration-black yellow1text">Account</a>
+            <a href="{{ route('customer.show', session('user.id')) }}"
+                class="my-6 underline decoration-black yellow1text">Account</a>
 
             <form method="POST" action="{{ route('user.logout') }}">
                 @csrf
