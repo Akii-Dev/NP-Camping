@@ -10,6 +10,7 @@
 </head>
 
 <body class="bg-blue-300">
+    <x-navbar></x-navbar>
     <div style="background-image: url('{{ Vite::asset('resources/imgs/BosLogin.jpg') }}')"
         class="min-h-screen bg-cover bg-center flex justify-center items-center px-4 py-10">
         <div class="lg:flex-row flex flex-col justify-center relative z-20 items-center">
