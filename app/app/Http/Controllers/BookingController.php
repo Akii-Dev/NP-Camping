@@ -19,7 +19,11 @@ class BookingController extends Controller
 
     public function create()
     {
-        // get user data
-        return view('booking.create');
+        // get user id from the session. user is saved as a whole and id is part of it
+        $userId = session('user.id');
+        $user = User::find($userId);
+        $customer = $user->customer;
+        // return view('booking.create');
+        return view('booking.create', compact('customer'));
     }
 }
