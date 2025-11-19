@@ -46,8 +46,16 @@
     background-color: #cf5c36;
 }
 
+.orange1textNoLink {
+    color: #cf5c36;
+}
+
 .orange1text {
     color: #cf5c36;
+}
+
+.orange1text:hover {
+    color: #b14825;
 }
 
 .cyan1 {
@@ -59,4 +67,11 @@
 
 .cyan1text {
     color: #0fa3b1;
+}
+
+.orange2 {
+    border-left: solid 5px;
+    border-right: solid 5px;
+    border-radius: 2vh;
+    border-color: #cf5c36;
 }
