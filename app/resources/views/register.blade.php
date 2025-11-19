@@ -15,5 +15,6 @@
         <input type="password" name="confirm_password" placeholder="Confirm password">
         <button type="submit">Register</button>
     </form>
+    <a href="{{route('user.login')}}">Heb je al een account?</a>
 </body>
 </html>
