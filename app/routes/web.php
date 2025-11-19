@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -21,4 +22,5 @@ Route::post('/register', [UserController::class, 'register'])->name('user.regist
 Route::post('/logout', [UserController::class, 'logout'])->name('user.logout');
 
 Route::resource('customer', CustomerController::class);
+Route::resource('booking', BookingController::class);
 

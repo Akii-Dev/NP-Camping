@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Spot;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
 
         $newAdmins = 2;
         $newCustomers = 5;
+        $spots = 20;
 
         User::factory($newAdmins)->hasAdmin()->create([
             'role' => 'admin',
@@ -36,5 +38,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'role' => 'admin',
         ]);
+
+        Spot::factory($spots)->create();
     }
 }
