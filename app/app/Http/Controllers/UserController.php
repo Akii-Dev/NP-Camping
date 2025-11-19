@@ -29,8 +29,7 @@ class UserController extends Controller
         }
 
 
-        // $_SESSION['user'] = $user; // useful for knowing the name and role
-        session(['user' => $user]); // laravel session way
+        session(['user' => $user]); // handle sessions using Laravel instead of native PHP
         Auth::login($user); // authenticate user so we can use @auth
 
 
@@ -66,12 +65,11 @@ class UserController extends Controller
         ]);
 
         // keep user logged in after registration
-        // $_SESSION['user'] = $user; // standard php session way
-        session(['user' => $user]); // proper laravel session way
+        session(['user' => $user]); // handle sessions using Laravel instead of native PHP
 
         // authenticate user so we can use @auth
         Auth::login($user);
-        
+
 
         return view('index');
     }
@@ -80,7 +78,7 @@ class UserController extends Controller
     {
         session()->flush(); // clear all session data.
 
-        Auth::logout(); 
+        Auth::logout();
         return view('index');
     }
 }
