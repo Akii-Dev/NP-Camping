@@ -46,8 +46,16 @@
     background-color: #cf5c36;
 }
 
+.orange1textNoLink {
+    color: #cf5c36;
+}
+
 .orange1text {
     color: #cf5c36;
+}
+
+.orange1text:hover {
+    color: #b14825;
 }
 
 .cyan1 {
@@ -75,4 +83,9 @@
 
 .vinkbold {
     font-weight: bolder;
+.orange2 {
+    border-left: solid 5px;
+    border-right: solid 5px;
+    border-radius: 2vh;
+    border-color: #cf5c36;
 }
