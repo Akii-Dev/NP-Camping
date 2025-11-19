@@ -8,8 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    @for ($i = 0; $i < 10; $i++)
-        <p>Booking Index Page - Item {{ $i  }}</p>
-    @endfor
+    @foreach ($spots as $spot)
+        @if ($spot->booked == 1)
+            <div class="bg-yellow-500 w-32">
+        @elseif ($spot->booked == 0)
+            <div class="bg-green-500 w-28"> {{-- Different width to show difference --}}
+        @endif
+
+            <h2>Spot {{ $spot->id }}</h2>
+            {{-- <h2>Is it booked? {{ $spot->booked }}</h2> --}}
+        </div>
+    @endforeach
 </body>
 </html>
