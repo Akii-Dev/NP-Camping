@@ -10,6 +10,38 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+
+.huisregelBG {
+    border-color: #4BA0AF;
+}
+
+.huisregelBG2 {
+    border-color: #C1633F;
+}
+
+.normTekst {
+    font-family: 'Open Sans';
+}
+
+.kopje {
+    font-family: 'Roboto';
+}
+.yellow1 {
+    background-color: #deb841;
+}
+
+.yellow1text {
+    color: #deb841;
+}
+
+.yellow1text:hover {
+    color: #ad8f35;
+}
+
+.yellow1textNonLink {
+    color: #deb841;
+}
+
 .orange1 {
     background-color: #cf5c36;
 }
