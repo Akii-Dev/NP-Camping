@@ -15,7 +15,7 @@
             <div class="flex flex-col lg:flex-row shadow-2xl overflow-hidden">
 
                 {{-- Login panel --}}
-                <div class="flex flex-col p-10 lg:p-16 justify-center rounded-l-2xl bg-gray-500/95 shadow-xl/30 ">
+                <div class="flex flex-col p-10 lg:p-16 justify-center rounded-2xl lg:rounded-l-2xl lg:rounded-none bg-gray-500/95 shadow-xl/30 ">
                     <h2 class="text-cyan-500 text-4xl font-bold mb-10 lg:mb-16">Inloggen</h2>
 
                     <form class="flex flex-col w-full max-wxs lg:w-80" action="{{route('user.login')}}" method="POST">
