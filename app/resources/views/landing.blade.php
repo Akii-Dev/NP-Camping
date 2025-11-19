@@ -20,26 +20,26 @@
         <div
             class="mx-4 mt-[65vh] h-[18vh] w-1/4 hidden md:flex flex-col items-center justify-center backdrop-blur-sm text-center py-2 px-16 rounded text-white">
             <h3 class="font-bold text-2xl mb-4">Book nu een plaats!</h3>
-            <a href="#"><button class="w-24 h-12 orange1 rounded">Boeken</button></a>
+            <a href="#"><button class="shadow w-24 h-12 orange1 rounded">Boeken</button></a>
         </div>
         <div
             class="md:hidden mx-4 mt-20 h-1/3 flex flex-col items-center justify-center backdrop-blur-sm text-center py-2 px-4 rounded text-white">
             <h3 class="font-bold text-2xl orange1textNoLink">NP Camping</h3>
             <p class="my-4">Dé camping voor rustig uitje op het platteland</p>
-            <a href="#"><button class="w-24 h-12 orange1 rounded">Boeken</button></a>
+            <a href="#"><button class="shadow w-24 h-12 orange1 rounded">Boeken</button></a>
 
         </div>
     </div>
     <main class="flex flex-col items-center justfiy-center bg-neutral-200 px-0 md:px-44 overflow-hidden">
         <hr class="w-[80%] my-8 border-1">
         <div
-            class="h-48 w-9/10 overflow-hidden md:w-3/5 cyan1 bg-zinc-100 rounded py-2 md:py-4 px-4 md:px-8 mb-4 md:mb-16 flex flex-col justfiy-center items-center text-center">
+            class="h-48 w-9/10 overflow-hidden md:w-3/5 cyan1 bg-zinc-100 rounded shadow py-2 md:py-4 px-4 md:px-8 mb-4 md:mb-16 flex flex-col justfiy-center items-center text-center">
             <h2 class="text-2xl font-semibold">De Camping</h2>
             <p>Bij NP Camping geniet je van een gezellige kampeerplaats in het mooie platteland van noord Groningen!</p>
             <p class="hidden md:block">Met al de wandel- en fietsroutes in de omgeving ben je zeker van alles tegen te komen, zoals ouderwetse dorpen en molens!</p>
         </div>
         <section class="flex flex-col md:flex-row my-4 md:my-8 text-center">
-            <div class="w-64 h-48 md:h-auto orange2 my-2 md:cyan1 rounded shadow-xl p-2 bg-zinc-100 mx-2">
+            <div class="w-64 h-48 md:h-auto orange2 my-2 md:cyan1 rounded shadow p-2 bg-zinc-100 mx-2">
                 <img class="rounded-lg hidden md:block" src="{{ Vite::asset('resources/img/card1.png') }}"
                     alt="" />
                 <div class="p-3">
