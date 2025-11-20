@@ -26,16 +26,9 @@
 .kopje {
     font-family: 'Roboto';
 } */
+
 .yellow1 {
     background-color: #deb841;
-}
-
-.yellow1text {
-    color: #deb841;
-}
-
-.yellow1text:hover {
-    color: #ad8f35;
 }
 
 .yellow1textNonLink {
