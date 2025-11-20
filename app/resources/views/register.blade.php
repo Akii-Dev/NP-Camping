@@ -16,7 +16,7 @@
             <div class="flex flex-col lg:flex-row shadow-2xl overflow-hidden">
 
                 {{-- Login panel --}}
-                <div class="flex flex-col p-10 lg:p-16 justify-center rounded-l-2xl bg-gray-500/95 shadow-xl/30 ">
+                <div class="flex flex-col p-10 lg:p-16 justify-center rounded-2xl bg-gray-500/95 shadow-xl/30 ">
                     <h2 class="text-cyan-500 text-4xl font-bold mb-10 lg:mb-16">Registreren</h2>
 
                     <form class="flex flex-col w-full max-wxs lg:w-80" action="{{route('user.register')}}" method="POST">
@@ -37,22 +37,26 @@
                 </div>
             </div>
     </div>
-    <footer class="text-white bg-zinc-900 h-auto w-auto px-2 lg:px-40 py-2 grid grid-row-3 lg:grid-cols-3 lg:h-36 lg:divide-x-1 divide-solid divide-white">
+
+    <footer
+        class="text-white bg-zinc-900 h-auto w-auto px-2 lg:px-40 py-2 grid grid-row-3 lg:grid-cols-3 lg:h-36 lg:divide-x-1 divide-solid divide-white">
         <div class="px-2 text-sm row-span-1 lg:row-span-0 border-b-2 lg:border-b-0">
             <h3 class="font-semibold text-lg">Contact</h3>
             <p>Email: info@npcamping.nl</p>
-            <p>Phone: 06 12312312</p>
+            <p>Phone: 06 12341234</p>
         </div>
         <div class="px-2 text-sm row-span-1 lg:row-span-0 border-b-2 lg:border-b-0">
             <h3 class="font-semibold text-lg">NP Camping</h3>
-            <p>Adres: Borgerweg 23</p>
-            <p>Postcode: 9462RA Gasselte</p>
+            <p>Adres: Kruimelweg 23</p>
+            <p>Postcode: 8462RA Broden</p>
         </div>
         <div class="px-2 text-sm row-span-1 lg:row-span-0 border-b-2 lg:border-b-0">
             <h3 class="font-semibold text-lg">Informatie</h3>
-            <p>Open van 1 april tot en met 31 oktober</p>
+            <p>Wij zijn open van 4 juli tot 16 augustus</p>
+            <p>Dus de hele zomervakantie kunt u boeken</p>
         </div>
     </footer>
+
     {{-- sessions error handles manualy declared errors in the session --}}
     @if (session('error'))
         <div class="bg-red-500">
