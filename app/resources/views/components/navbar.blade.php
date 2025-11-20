@@ -8,12 +8,13 @@
     class="z-50 left-0 h-screen w-12 fixed bg-zinc-300/95 md:bg-zinc-300/30 text-center md:duration-500 py-2 text-2xl hidden md:block font-bold">
     <div id="navContent"
         class="relative flex flex-col w-full items-center md:transition-all md:duration-400 md:ease-in-out opacity-0 pointer-events-none">
-        <a href="#">
+        <a href="./">
             <img class="h-36" src="{{ Vite::asset('resources/img/logo.png') }}" alt="background image">
         </a>
         <hr class="w-[80%] my-8 bg-gray-400 border-1">
-        <a href="#" class="my-6 underline decoration-black yellow1text">Home</a>
-        <a href="#" class="my-6 underline decoration-black yellow1text">Booken</a>
+        {{-- change ./booking to {{route('booking.index')}} when using proper routing --}}
+        <a href="./booking" class="my-6 underline decoration-black yellow1text">Booken</a>
+
         {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller --}}
         <a href="./rules" class="my-6 underline decoration-black yellow1text">Huisregels</a>
         <a href="{{ route('user.login') }}" class="my-6 underline decoration-black yellow1text">Login</a>

@@ -13,59 +13,60 @@
     <x-navbar></x-navbar>
     <div style="background-image: url('{{ Vite::asset('resources/imgs/BosLogin.jpg') }}')"
         class="min-h-screen bg-cover bg-center flex justify-center items-center px-4 py-10">
-        <div class="lg:flex-row flex flex-col justify-center relative z-20 items-center">
-            <div class="flex p-10 lg:p-16 justify-center items-center rounded-l-2xl bg-gray-500/95 shadow-xl/30 ">
-                <div class="">
-                    <h2 class="text-cyan-500 text-4xl mb-16 font-bold">Inloggen</h2>
-                    <form class="flex flex-col" action="{{ route('user.login') }}" method="POST">
+
+            <div class="flex flex-col lg:flex-row shadow-2xl overflow-hidden">
+
+                {{-- Login panel --}}
+                <div class="flex flex-col p-10 lg:p-16 justify-center rounded-2xl lg:rounded-l-2xl lg:rounded-none bg-gray-500/95 shadow-xl/30 ">
+                    <h2 class="text-cyan-500 text-4xl font-bold mb-10 lg:mb-16">Inloggen</h2>
+
+                    <form class="flex flex-col w-full max-wxs lg:w-80" action="{{route('user.login')}}" method="POST">
                         @csrf
                         <label class="mt-3 font-bold">Email</label>
-                        <input class="bg-white mb-4 rounded-2xl p-2 pr-28 shadow-xl/30" type="text" name="email"
-                            placeholder="Email">
+                        <input class="bg-white mb-4 rounded-2xl p-2 shadow-xl/30" type="text" name="email" placeholder="Email">
+
                         <label class="font-bold">Wachtwoord</label>
-                        <input class="bg-white mb-6 rounded-2xl p-2 pr-28 shadow-xl/30" type="password" name="password"
-                            placeholder="Password">
-                        <div class="flex justify-center">
-                            <button
-                                class="bg-white mb-6 rounded-2xl p-2 w-60 shadow-xl/30 mt-12 text-xl font-bold text-cyan-500"
-                                type="submit">Login</button>
-                        </div>
+                        <input class="bg-white mb-6 rounded-2xl p-2 shadow-xl/30" type="password" name="password" placeholder="Password">
+
+                        <button class="bg-white mt-8 rounded-2xl p-2 w-full shadow-xl/30 text-xl font-bold text-cyan-500" type="submit">Login</button>
                     </form>
                 </div>
-            </div>
-            <div class="flex flex-col p-10 lg:p-16 justify-center items-center rounded-r-2xl bg-white/95 shadow-xl/30">
-                <h2 class="text-4xl">Nog geen account?</h2>
-                <p class="mt-6 mb-6">Maak vandaag nog een account aan.</p>
-                <div class="flex w-72 mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-7 flex-none text-green-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                    <p>Als er nog geen account is aangemaakt.</p>
+
+                {{-- Register panel --}}
+                <div class="flex flex-col p-10 mt-10 lg:mt-0 lg:p-16 justify-center 
+                            items-center lg:items-start rounded-2xl lg:rounded-r-2xl lg:rounded-none bg-white/95 shadow-xl/30">
+                    <h2 class="text-3xl lg:text-4xl font-bold">Nog geen account?</h2>
+                    <p class="mt-4 mb-6">Maak vandaag nog een account aan.</p>
+
+                    <div class="space-y-3 mb-10">
+                        <div class="flex gap-2 items-start w-64">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-7 flex-none text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                            <p>Als er nog geen account is aangemaakt.</p>
+                        </div>
+
+                        <div class="flex gap-2 items-start w-64">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-7 flex-none text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                            <p>Je hebt je gemaakte boekingen in één overzicht.</p>
+                        </div>
+
+                        <div class="flex gap-2 items-start w-64">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-7 flex-none text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                            <p>Bekijk en/of wijzig de details van je boeking.</p>
+                        </div>
+
+                        <div class="flex gap-2 items-start w-64">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-7 flex-none text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                            <p>Maak je verblijf compleet en voeg extra's toe aan je boeking.</p>
+                        </div>
+                    </div>
+                    <a class="bg-amber-300 text-xl font-bold rounded-2xl p-3 w-full max-w-xs text-center lg:px-20 lg:w-auto shadow-xl/30" href="{{route('user.register')}}">Registreer</a>
                 </div>
-                <div class="flex w-72 mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-7 flex-none text-green-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                    <p>Je hebt je gemaakte boekingen in één overzicht.</p>
-                </div>
-                <div class="flex w-72 mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-7 flex-none text-green-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                    <p>Bekijk en/of wijzig de details van je boeking.</p>
-                </div>
-                <div class="flex w-72 mb-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-7 flex-none text-green-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                    <p>Maak je verblijf compleet en voeg extra's toe aan je boeking.</p>
-                </div>
-                <a class="bg-amber-300 text-xl font-bold rounded-2xl p-2 px-20 shadow-xl/30"
-                    href="{{ route('user.register') }}">Registeer</a>
+                {{-- <a class="bg-amber-300 text-xl font-bold rounded-2xl p-2 px-20 shadow-xl/30"
+                    href="{{ route('user.register') }}">Registeer</a> --}}
             </div>
         </div>
     </div>
@@ -87,9 +88,9 @@
         </div>
     </footer>
 
-
-
-    {{-- errors declared using the error session --}}
+    
+    
+      {{-- errors declared using the error session --}}
     @if (session('error'))
         <div class="bg-red-500">
             {{ session('error') }}
