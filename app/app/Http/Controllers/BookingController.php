@@ -30,7 +30,7 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         // validate both the customer info and the new booking info
-        $validated = $request->validate([
+        $validatedBooking = $request->validate([
             'spot' => 'required|numeric|exists:spots,id', // spot id must exist in spots table
             'persons' => 'required|numeric|min:1|max:10',
             'dog' => 'nullable|boolean', // either true or false. null and false should be the same
@@ -38,11 +38,14 @@ class BookingController extends Controller
             'camping_means' => 'required|string|max:100',
             'date_start' => 'required|date',
             'date_end' => 'required|date|after:date_start', // end date must be after start date
+        ]);
+        $validatedCustomer = $request->validate([
+
             // customer fields. these can be pre filled 
             'title' => 'nullable|string|max:10', // not everyone wants a title
             'initials' => 'required|string|max:10',
             'intersertion' => 'nullable|string|max:50', // "tussenvoegsel"
-            'surname' => 'required|string|max:100', 
+            'surname' => 'required|string|max:100',
             'street' => 'required|string|max:100', // 
             'house_number' => 'required|numeric|max:9999', // max 10 would mean number 11 can't be used.
             'house_number_addition' => 'nullable|string|max:10',
@@ -53,9 +56,26 @@ class BookingController extends Controller
         ]);
 
 
-        // update customer info
+        // update customer info if it changed
         $userId = session('user.id'); // user id. not customer id
         $user = User::find($userId);
         $customer = $user->customer;
+        $customer->update($validatedCustomer); // 
+
+        // create new booking
+        $booking = Booking::factory()->create([
+            'customer_id' => $customer->id, // so this is customer id. not user id
+            'number_of_people' => $validatedBooking['persons'],
+            'accommodation' => $validatedBooking['camping_means'], 
+            'has_dog' => $validatedBooking['dog'] ?? false, 
+            'extra_tents' => $validatedBooking['extra_tent'] ?? 0,
+            'start_date' => $validatedBooking['date_start'],
+            'end_date' => $validatedBooking['date_end'],
+        ]);
+
+        // return redirect()->route('customer.show', $userId)->with('success', `Booking created successfully! See you on {$validatedBooking['date_start']}.`);
+        return redirect()->route('customer.show', $user->id)->with('success', 'Boeking aangemaakt! Tot ' . $validatedBooking['date_start']); // backticks do not work
+
+
     }
 }
