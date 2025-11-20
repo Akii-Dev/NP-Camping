@@ -20,7 +20,7 @@
         <div
             class="mx-4 mt-[65vh] h-[18vh] w-1/4 hidden md:flex flex-col items-center justify-center backdrop-blur-sm text-center py-2 px-16 rounded text-white">
             <h3 class="font-bold text-2xl mb-4">Book nu een plaats!</h3>
-            <a href="#"><button class="shadow w-24 h-12 orange1 rounded">Boeken</button></a>
+            <a href="/booking"><button class="shadow w-24 h-12 orange1 rounded">Boeken</button></a>
         </div>
         <div
             class="md:hidden mx-4 mt-20 h-1/3 flex flex-col items-center justify-center backdrop-blur-sm text-center py-2 px-4 rounded text-white">
