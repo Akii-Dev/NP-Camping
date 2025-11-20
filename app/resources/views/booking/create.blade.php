@@ -13,7 +13,7 @@
     <form action="{{ route('booking.store') }}" method="POST">
         @csrf
         <label for="spot">Plaatsnummer:</label>
-        <input type="number" name="spot" id="spot" value="" placeholder="4">
+        <input type="number" name="spot" id="spot" value="" placeholder="4" required>
         <br>
         <label for="persons">Aantal personen:</label>
         <input type="number" name="persons" id="persons" value="" placeholder="4" required>
@@ -32,8 +32,9 @@
         <input type="date" name="date_start" id="date_start" value="" placeholder="" required>
         <br>
         <label for="end_date">Vertrekdatum:</label>
-        <input type="date" name="end_date" id="end_date" value="" placeholder="" required>
+        <input type="date" name="date_end" id="date_end" value="" placeholder="" required>
         <br>
+        {{-- user info --}}
         <h2 class="text-3xl">Persoonsgegevens</h1>
         <label for="title">Aanhef:</label>
         <input type="text" name="title" id="title" value="{{ $customer->title }}" placeholder="Drs, Mr, Mevr">
@@ -80,6 +81,20 @@
         <br>
         <button type="submit">Maak booking aan</button>
     </form>
+     {{-- errors declared in session --}}
+    @if (session('error'))
+        <div class="bg-red-500">
+            {{ session('error') }}
+        </div>
+    @endif
+    {{-- input validation errors --}}
+    @if ($errors->any())
+        <div>
+            @foreach ($errors->all() as $error)
+                <p class="bg-red-500">{{ $error }}</p>
+            @endforeach
+        </div>
+    @endif
 </body>
 
 </html>
