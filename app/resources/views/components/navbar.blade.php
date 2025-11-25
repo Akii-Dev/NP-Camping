@@ -17,7 +17,10 @@
 
         {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller --}}
         <a href="./rules" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Huisregels</a>
-        <a href="{{ route('user.login') }}" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Login</a>
+        @guest
+            <a href="{{ route('user.login') }}" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Login</a>
+        @endguest
+
         @auth
             <a href="{{ route('customer.show', session('user.id')) }}"
                 class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Account</a>
