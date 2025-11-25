@@ -17,8 +17,7 @@ class BookingController extends Controller
             return redirect('/login');
         }
 
-        // get all spots from the database
-        $spots = Spot::all();
+        $spots = Spot::all(); // get all spots from the database
         return view('booking.index', compact('spots')); // short for ['spot' => $spot]
     }
 
@@ -43,8 +42,8 @@ class BookingController extends Controller
             'date_start' => 'required|date',
             'date_end' => 'required|date|after:date_start', // end date must be after start date
         ]);
+        
         $validatedCustomer = $request->validate([
-
             // customer fields. these can be pre filled 
             'title' => 'nullable|string|max:10', // not everyone wants a title
             'initials' => 'required|string|max:10',
@@ -58,7 +57,6 @@ class BookingController extends Controller
             'country' => 'required|string|max:100',
             'phone_number' => 'required|string|max:20',
         ]);
-
 
         // update customer info if it changed
         $userId = session('user.id'); // user id. not customer id
@@ -78,7 +76,5 @@ class BookingController extends Controller
         ]);
 
         return redirect()->route('customer.show', $user->id)->with('success', 'Boeking aangemaakt! Tot ' . $validatedBooking['date_start']); // backticks do not work
-
-
     }
 }

@@ -67,9 +67,7 @@ class UserController extends Controller
 
         // keep user logged in after registration
         session(['user' => $user]); // handle sessions using Laravel instead of native PHP
-
         Auth::login($user); // authenticate user so we can use @auth
-
 
         return view('index');
     }
@@ -77,8 +75,8 @@ class UserController extends Controller
     public function logout()
     {
         session()->flush(); // clear all session data.
-
-        Auth::logout();
+        Auth::logout(); // unauthenticate user. blade will know see them as @guest
+        
         return view('index');
     }
 }
