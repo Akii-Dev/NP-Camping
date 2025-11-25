@@ -18,7 +18,7 @@ class BookingFactory extends Factory
     {
         return [
             
-            'customer_id' => 1, // we can't assume more customers exist yet
+            'customer_id' => 1, // we can't assume more customers exist when using dummy data
             'number_of_people' => $this->faker->numberBetween(1, 10), // the 10 person limit is uniform across all validations
             'accommodation' => $this->faker->randomElement(['tent', 'camper', 'caravan']),
             'has_dog' => $this->faker->boolean(), // either 1 or 0. which is true or false

@@ -51,3 +51,8 @@ php artisan serve
 
 2. Open the app in the browser. By default your link will be:
 - http://127.0.0.1:8000
+
+3. If you are making changes to the database structure or seeders: Use this command afterwards:
+```
+php artisan migrate:fresh --seed
+```
