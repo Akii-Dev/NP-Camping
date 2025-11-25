@@ -12,6 +12,10 @@ class UserController extends Controller
     // method for showing the login page on login.blade.php
     public function showLoginForm()
     {
+        // check if user is already logged in
+        if (session()->has('user')) {
+            return view('index');
+        }
         return view('login');
     }
 
@@ -30,14 +34,14 @@ class UserController extends Controller
 
 
         session(['user' => $user]); // handle sessions using Laravel instead of native PHP
-        Auth::login($user); // authenticate user so we can use @auth
+        Auth::login($user); // authenticate user so we can use @auth in blade files
 
 
         if ($user->role === 'admin') {
-            return view('index'); // change index to admin later
+            return view('index'); // change index to admin later if that exists
+        } else {
+            return view('index');
         }
-
-        return view('index');
     }
 
     public function showRegisterForm()
