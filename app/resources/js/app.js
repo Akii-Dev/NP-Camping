@@ -12,21 +12,23 @@ const navbar = document.getElementById('sideNav');
 const navContent = document.getElementById('navContent');
 const burgerBtn = document.getElementById('burgerBtn');
 
-const overlayBoeking = document.getElementById('overlayBoeking');
-const popup = document.getElementById('popup');
-const closePopup = document.getElementById('closePopup');
-
-overlayBoeking.addEventListener('click', () => {
-    popup.classList.add('hidden');
-    overlayBoeking.classList.add('hidden');
-    burgerBtn.classList.remove('hidden')
-});
-
-closePopup.addEventListener('click', () => {
-    popup.classList.add('hidden');
-    overlayBoeking.classList.add('hidden');
-    burgerBtn.classList.remove('hidden')
-});
+if (document.getElementById('overlayBoeking')) {
+    const overlayBoeking = document.getElementById('overlayBoeking');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+    
+    overlayBoeking.addEventListener('click', () => {
+        popup.classList.add('hidden');
+        overlayBoeking.classList.add('hidden');
+        burgerBtn.classList.remove('hidden')
+    });
+    
+    closePopup.addEventListener('click', () => {
+        popup.classList.add('hidden');
+        overlayBoeking.classList.add('hidden');
+        burgerBtn.classList.remove('hidden')
+    });    
+}
 
 if (handleWidth >= 768) {
     if (fullHeight < handleHeight * 2) {
