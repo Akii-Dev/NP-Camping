@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rules | NP-Camping</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -28,51 +28,47 @@
             <h1 class="text-5xl font-bold mb-10 kopje border-4 p-4 rounded-4xl mt-10">Huisregels</h1>
         </div>
         <div class="flex flex-col items-start mt-6 p-4 huisregelBG w-auto md:w-2xl">
-            <h1 class="text-4xl font-bold kopje mb-6">Geluidloosheid</h1>
+            <h1 class="text-4xl font-bold kopje mb-6">Stilte</h1>
             <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">Na 23:00 tot 07:00 geen lawaai want andere gasten liggen nog
-                    te slapen dus houd uw geluids niveau laag. Zodat u en andere bezoekers een goede nacht rust krijgen.
+                <h4 class="text-2xl">Van 23:00 tot 07:00 houden we de camping stil. Geen vuurputten, luide muziek, of
+                    bij andere kampeerders spreken.
                 </h4>
             </div>
         </div>
         <div class="flex flex-col items-start mt-6 p-4 huisregelBG2 w-auto md:w-2xl">
             <h1 class="text-4xl font-bold kopje mb-6">Vuurput</h1>
             <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">U mag alleen de vuurputten gebruiken in overleg met medewerkers.
-                    U kunt het gebruik maken van de vuurputten tussen 17:00 tot 23:00.</h4>
+                <h4 class="text-2xl">De vuurputten zijn alleen te gebruiken in overleg met medewerkers, de vuurputten
+                    zijn beschikbaar tussen 17:00 en 23:00.</h4>
             </div>
         </div>
         <div class="flex flex-col items-start mt-6 p-4 huisregelBG w-auto md:w-2xl">
             <h1 class="text-4xl font-bold kopje mb-6">Zwembad</h1>
             <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">Het zwembad is open tussen 10:00 tot 17:00. Voor u veiligheid
-                    mag u alleen zwemmen als er een badmeester aanwezig is. Let op u mag niet rennen bij
-                    of rondom het zwembad voor u veiligheid word dit verboden.</h4>
+                <h4 class="text-2xl">Het zwembad is open van 10:00 tot 17:00. Het zwembad is verder alleen beschikbaar
+                    als er een badmeester aanwezig is.</h4>
             </div>
         </div>
         <div class="flex flex-col items-start mt-6 p-4 huisregelBG2 w-auto md:w-2xl">
-            <h1 class="text-4xl font-bold kopje mb-6">Honden</h1>
+            <h1 class="text-4xl font-bold kopje mb-6">Huisdieren</h1>
             <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">Wij laten alleen honden toe op het terrein dus geen andere
-                    huisdieren. Per plek maximaal maar 1 hond. Zorg dat u uw hond aan de lijn houd,
-                    zodat het anderen niet lastig valt.
+                <h4 class="text-2xl">Er mag per kampeerplek 1 hond aanwezig zijn. Houdt uw hond aan de lijn camping en
+                    ruim uw eigen afval op.
                 </h4>
             </div>
         </div>
         <div class="flex flex-col items-start mt-6 p-4 huisregelBG w-auto md:w-2xl">
             <h1 class="text-4xl font-bold kopje mb-6">visite</h1>
             <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">Visite mag langs komen van 07:00 tot 23:00 Zorg dat er
-                    niet te veel overlast is. Als de visite wil overnachten dan moeten
-                    ze €20 euro per nacht betalen</h4>
+                <h4 class="text-2xl">Visite is welkom tussen 07:00 en 23:00, overnachten kost gasten €20,-.</h4>
             </div>
         </div>
         <div class="flex flex-col items-start mt-6 p-4 mb-10 huisregelBG2 w-auto md:w-2xl">
-            <h1 class="text-4xl font-bold kopje mb-6">Auto's</h1>
+            <h1 class="text-4xl font-bold kopje mb-6">Voertuigen</h1>
             <div class="flex flex-col text-left w-full px-6">
-                <h4 class="text-2xl">U kunt uw auto gratis op het parkeer terein plaatsen of in
-                    uw tent vak als u een gast bent. Dit kan alleen als u 1 auto heeft voor elke extra auto betaalt u
-                    €1,75 per nacht meer.</h4>
+                <h4 class="text-2xl">Vervoer gelieve op de gratis parkeerplaats houden, er mag 1 auto op uw kampeerplek.
+                    Extra voertuigen betalen €1.75 per stuk. Rolstoel vervoer parkeerd gratis.
+                </h4>
             </div>
         </div>
     </div>
