@@ -18,7 +18,14 @@ class CustomerController extends Controller
             return redirect('/')->with('error', 'Gebruiker niet gevonden');
         }
         $customer = $user->customer;
-        return view('customer.show', compact('customer'));
+        // show bookings related to this customer
+        if ($customer->bookings->isEmpty()) {
+            $bookings = [];
+        } else {
+            $bookings = $customer->bookings;
+        }
+        // return view('customer.show', compact('customer'));
+        return view('customer.show', compact('customer', 'bookings'));
     }
     public function edit(Request $request, $id)
     {

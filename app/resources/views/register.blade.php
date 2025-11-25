@@ -15,7 +15,7 @@
 
             <div class="flex flex-col lg:flex-row shadow-2xl overflow-hidden">
 
-                {{-- Login panel --}}
+                {{-- Register panel --}}
                 <div class="flex flex-col p-10 lg:p-16 justify-center rounded-2xl bg-gray-500/95 shadow-xl/30 ">
                     <h2 class="text-cyan-500 text-4xl font-bold mb-10 lg:mb-16">Registreren</h2>
 
