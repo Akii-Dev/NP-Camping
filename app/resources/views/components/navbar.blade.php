@@ -8,7 +8,7 @@
     class="z-50 left-0 h-screen w-12 fixed bg-zinc-300/95 md:bg-zinc-300/30 text-center md:duration-500 py-2 text-2xl hidden md:block font-bold">
     <div id="navContent"
         class="relative flex flex-col w-full items-center md:transition-all md:duration-400 md:ease-in-out opacity-0 pointer-events-none">
-        <a href="./">
+        <a href="../">
             <img class="h-36" src="{{ Vite::asset('resources/img/logo.png') }}" alt="background image">
         </a>
         <hr class="w-[80%] my-8 bg-gray-400 border-1">
