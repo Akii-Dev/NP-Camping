@@ -12,6 +12,10 @@ class UserController extends Controller
     // method for showing the login page on login.blade.php
     public function showLoginForm()
     {
+        // check if user is already logged in
+        if (session()->has('user')) {
+            return view('index');
+        }
         return view('login');
     }
 
@@ -30,14 +34,14 @@ class UserController extends Controller
 
 
         session(['user' => $user]); // handle sessions using Laravel instead of native PHP
-        Auth::login($user); // authenticate user so we can use @auth
+        Auth::login($user); // authenticate user so we can use @auth in blade files
 
 
         if ($user->role === 'admin') {
-            return view('index'); // change index to admin later
+            return view('index'); // change index to admin later if that exists
+        } else {
+            return view('index');
         }
-
-        return view('index');
     }
 
     public function showRegisterForm()
@@ -59,17 +63,11 @@ class UserController extends Controller
             'role' => 'customer', // set role to customer by default
         ]);
 
-        // create customer profile for new user
-        Customer::create([
-            'user_id' => $user->id,
-        ]);
+        Customer::create(['user_id' => $user->id,]); // create customer profile for new user
 
         // keep user logged in after registration
         session(['user' => $user]); // handle sessions using Laravel instead of native PHP
-
-        // authenticate user so we can use @auth
-        Auth::login($user);
-
+        Auth::login($user); // authenticate user so we can use @auth
 
         return view('index');
     }
@@ -77,8 +75,8 @@ class UserController extends Controller
     public function logout()
     {
         session()->flush(); // clear all session data.
-
-        Auth::logout();
+        Auth::logout(); // unauthenticate user. blade will know see them as @guest
+        
         return view('index');
     }
 }

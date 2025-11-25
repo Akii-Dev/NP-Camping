@@ -57,6 +57,8 @@
                     overlayBoeking.classList.remove('hidden');
                     burgerBtn.classList.add('hidden');
                     document.getElementById('spot-name').innerText = `Plaats ${id}`;
+                    // set session storage for spot id. retrieve this in booking.create route
+                    sessionStorage.setItem('selectedSpot', id);
                 }
             </script>
         </main>

@@ -10,6 +10,20 @@
 
 <body class="relative text-lg">
     <x-navbar></x-navbar>
+          {{-- errors declared using the error session --}}
+    @if (session('error'))
+        <div class="bg-red-500">
+            {{ session('error') }}
+        </div>
+    @endif
+    {{-- input validation errors --}}
+    @if ($errors->any())
+        <div>
+            @foreach ($errors->all() as $error)
+                <p class="bg-red-500">{{ $error }}</p>
+            @endforeach
+        </div>
+    @endif
     <div style="background-image: url('{{ Vite::asset('resources/img/camperimg.jpg') }}')"
         class="relative h-[90vh] bg-black overflow-hidden bg-cover bg-bottom flex justify-center">
         <div

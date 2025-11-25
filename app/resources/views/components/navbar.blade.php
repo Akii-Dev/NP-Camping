@@ -13,11 +13,14 @@
         </a>
         <hr class="w-[80%] my-8 bg-gray-400 border-1">
         {{-- change ./booking to {{route('booking.index')}} when using proper routing --}}
-        <a href="./booking" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Boeken</a>
+        <a href="../booking" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Boeken</a>
 
         {{-- change ./rules to {{route('rules')}} when adding a rules view route in a controller --}}
-        <a href="./rules" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Huisregels</a>
-        <a href="{{ route('user.login') }}" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Login</a>
+        <a href="../rules" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Huisregels</a>
+        @guest
+            <a href="{{ route('user.login') }}" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Login</a>
+        @endguest
+
         @auth
             <a href="{{ route('customer.show', session('user.id')) }}"
                 class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Account</a>
