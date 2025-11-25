@@ -1,4 +1,4 @@
-# NP-Restaurant
+# NP-Camping
 ## Requirements
 - PHP (v8.4.14 or higher)
 - Composer (v2.8.12)
