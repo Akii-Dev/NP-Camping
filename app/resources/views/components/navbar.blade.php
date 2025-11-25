@@ -20,7 +20,7 @@
         @guest
             <a href="{{ route('user.login') }}" class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Login</a>
         @endguest
-        
+
         @auth
             <a href="{{ route('customer.show', session('user.id')) }}"
                 class="my-6 underline decoration-[#deb841] hover:text-[#deb841]">Account</a>

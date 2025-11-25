@@ -63,16 +63,12 @@ class UserController extends Controller
             'role' => 'customer', // set role to customer by default
         ]);
 
-        // create customer profile for new user
-        Customer::create([
-            'user_id' => $user->id,
-        ]);
+        Customer::create(['user_id' => $user->id,]); // create customer profile for new user
 
         // keep user logged in after registration
         session(['user' => $user]); // handle sessions using Laravel instead of native PHP
 
-        // authenticate user so we can use @auth
-        Auth::login($user);
+        Auth::login($user); // authenticate user so we can use @auth
 
 
         return view('index');

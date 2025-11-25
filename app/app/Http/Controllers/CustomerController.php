@@ -16,7 +16,7 @@ class CustomerController extends Controller
         $user = User::find($id);
         if (!$user) {
             return redirect('/')->with('error', 'Gebruiker niet gevonden'); // return view doesn't seem to work with error messages. so we use redirect
-            
+
         }
 
         if (session('user.id') != $id) {
@@ -29,7 +29,6 @@ class CustomerController extends Controller
         } else {
             $bookings = $customer->bookings;
         }
-        // return view('customer.show', compact('customer'));
         return view('customer.show', compact('customer', 'bookings'));
     }
 
