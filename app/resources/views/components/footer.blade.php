@@ -12,7 +12,7 @@
         </div>
         <div class="px-2 text-sm row-span-1 lg:row-span-0 border-b-2 lg:border-b-0">
             <h3 class="font-semibold text-lg">Informatie</h3>
-            <p>Wij zijn open van 4 juli tot 16 augustus</p>
-            <p>Dus de hele zomervakantie kunt u boeken</p>
+            <p>Geopend van 4 juli t/m 16 augustus</p>
+            <p>Boeken kan buiten onze openingstijden</p>
         </div>
     </footer>
